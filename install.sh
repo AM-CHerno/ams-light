@@ -1,11 +1,25 @@
 #!/bin/bash
 set -e
 
-echo "==> Installing packages..."
+echo "==> Installing official repo packages..."
 sudo pacman -S --needed hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
   awww python-pywal cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
-  ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look
+  ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
+  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv
+
+echo "==> Checking for paru (AUR helper)..."
+if ! command -v paru &> /dev/null; then
+    echo "paru not found, installing..."
+    sudo pacman -S --needed base-devel git
+    git clone https://aur.archlinux.org/paru.git /tmp/paru-install
+    (cd /tmp/paru-install && makepkg -si --noconfirm)
+    rm -rf /tmp/paru-install
+fi
+
+echo "==> Installing AUR packages..."
+paru -S --needed spotify vscodium-bin zen-browser heroic-games-launcher-bin \
+  onlyoffice-bin gpu-screen-recorder obsidian
 
 echo "==> Copying dotfiles..."
 cp -r "$(dirname "$0")/.config/"* ~/.config/
