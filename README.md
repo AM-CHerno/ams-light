@@ -1,6 +1,6 @@
 # AM's Light Dotfiles
 
-A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper-based theming via pywal — rofi, waybar, dunst, hyprlock, and kitty all shift color palette together on wallpaper change.
+A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper based theming via pywal rofi, waybar, dunst, hyprlock, and kitty all shift color palette together on wallpaper change.
 
 ## Stack
 - **WM**: Hyprland (Lua config)
