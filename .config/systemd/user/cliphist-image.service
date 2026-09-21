@@ -1,0 +1,11 @@
+[Unit]
+Description=Cliphist image watcher
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=/usr/bin/wl-paste --type image --watch cliphist store
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+
+# Open Rofi grid picker with thumbnail previews
+SELECTED=$(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read -r img; do
+    echo -e "$(basename "$img")\0icon\x1f$img"
+done | rofi -dmenu -i -p "Wallpapers" -show-icons -theme-str 'element-icon { size: 5em; } listview { lines: 4; columns: 4; }')
+
+if [ -n "$SELECTED" ]; then
+    WALLPAPER="$WALLPAPER_DIR/$SELECTED"
+
+    # 1. Apply wallpaper via awww with transition
+    awww img "$WALLPAPER" --transition-type wipe --transition-duration 1
+
+    # 2. Extract palette using Pywal
+    wal -i "$WALLPAPER" -n
+
+    # 3. Cache current wallpaper path
+    echo "$WALLPAPER" > "$HOME/.cache/last_wallpaper"
+
+    # 4. Apply colors to components and reload UI
+    ~/.local/bin/apply-hyprlock-colors.sh
+    ~/.local/bin/apply-gtk-colors.sh
+    ~/.local/bin/apply-rofi-colors.sh
+    ~/.local/bin/apply-waybar-colors.sh
+    pkill waybar
+    waybar &
+    ~/.local/bin/apply-dunst-colors.sh
+fi
+

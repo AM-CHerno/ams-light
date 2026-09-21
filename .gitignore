@@ -1,0 +1,6 @@
+*.old
+*.bak
+cd ~/dotfiles
+git init
+git add .
+git commit -m "Initial dotfiles: Hyprland + waybar + rofi + pywal theming"

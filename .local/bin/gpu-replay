@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Dynamically fetch current active output device
+AUDIO_SINK="$(pactl get-default-sink).monitor"
+
+case "$1" in
+    start)
+        killall gpu-screen-recorder 2>/dev/null
+        gpu-screen-recorder -w screen -a "$AUDIO_SINK" -r 30 -o "$HOME/Videos"
+        ;;
+    save)
+        killall -SIGUSR1 gpu-screen-recorder
+        ;;
+    *)
+        echo "Usage: gpu-replay {start|save}"
+        ;;
+esac

@@ -1,0 +1,7 @@
+@theme "~/.cache/wal/colors-rofi-dark-fixed.rasi"
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "Apps";
+}
