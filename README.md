@@ -25,9 +25,10 @@ sudo pacman -S hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
 
 ## Installation
 
-1. Clone this repo:
 ```bash
-   git clone https://github.com/AM-CHerno/dotfiles.git ~/dotfiles-source
+git clone https://github.com/AM-CHerno/ams-light.git ~/ams-light
+cd ~/ams-light
+./install.sh
 ```
 
 2. Copy configs into place:
