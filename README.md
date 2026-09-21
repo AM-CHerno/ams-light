@@ -14,6 +14,13 @@ A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper-based 
 - **Color theming**: pywal
 - **Clipboard**: cliphist (via systemd user services)
 
+
+## One-command install
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/AM-CHerno/ams-light/master/bootstrap.sh)
+```
+
 ## Dependencies
 
 Installed automatically by `install.sh`, or manually:
