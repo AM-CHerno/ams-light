@@ -6,7 +6,7 @@ sudo pacman -S --needed hyprland waybar rofi dunst hyprlock hypridle kitty yazi 
   awww python-pywal cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
   ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
-  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv
+  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv discord
 
 echo "==> Checking for paru (AUR helper)..."
 if ! command -v paru &> /dev/null; then
@@ -19,7 +19,7 @@ fi
 
 echo "==> Installing AUR packages..."
 paru -S --needed spotify vscodium-bin zen-browser heroic-games-launcher-bin \
-  onlyoffice-bin gpu-screen-recorder obsidian
+  onlyoffice-bin gpu-screen-recorder obsidian equicord-installer-bin
 
 echo "==> Copying dotfiles..."
 cp -r "$(dirname "$0")/.config/"* ~/.config/
@@ -39,3 +39,5 @@ sudo systemctl enable --now bluetooth
 
 echo ""
 echo "Done. Add wallpapers to ~/Pictures/wallpapers/ then run: hyprctl reload"
+echo "To finish Equicord setup, run: equicord-installer"
+echo "Then in Discord: Vencord Settings > Themes > enable 'translucence-customized'"

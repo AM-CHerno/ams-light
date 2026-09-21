@@ -1,0 +1,161 @@
+/**
+ * @name Translucence (Customized)
+ * @version 2.0.0
+ * @description Translucent Discord theme with red notification badges, custom home logo, transparent message backgrounds, and compact message spacing.
+ * @author CapnKitten
+ */
+
+@import url(https://capnkitten.github.io/BetterDiscord/Themes/Translucence/css/source.css);
+
+/* Transparency Core Overrides */
+:root {
+	--background-primary: transparent !important;
+	/* Mocha base color with slight opacity for readability */
+	--background-secondary: rgba(30, 30, 46, 0.4) !important;
+	--background-tertiary: transparent !important;
+}
+
+body, #app-mount, .app_b1f720 {
+	background: transparent !important;
+}
+
+/* Translucence Theme Variables */
+:root {
+	/* APP ELEMENTS */
+	--app-bg: url(https://i.ibb.co/WNrbr1Yz/Alpine-Amnesia.png);
+	--app-blur: 6px;
+	--app-margin: 24px;
+	--app-radius: 8px;
+
+	/* ACCENT HSL AND TEXT COLOR SETTINGS (Red Badges) */
+	--accent-hue: 0;
+	--accent-saturation: 85%;
+	--accent-lightness: 55%;
+	--accent-opacity: 0.8;
+	--accent-text-color: hsl(0, 0%, 100%);
+
+	/* SIDEBARS AND CHAT AREA COLOR SETTINGS */
+	--sidebar-color: hsl(0,0%,0%,0.34);
+	--main-content-color: hsl(0,0%,0%,0.27);
+
+	/* MESSAGE SETTINGS (Transparent & Compact) */
+	--message-color: transparent !important;
+	--message-color-hover: rgba(255, 255, 255, 0.05) !important;
+	--message-radius: 0px;
+	--message-padding-top: 2px !important;
+	--message-padding-side: 4px !important;
+
+	/* REPLY HSL COLOR SETTINGS */
+	--reply-hue: 328;
+	--reply-saturation: 79%;
+	--reply-lightness: 64%;
+	--reply-opacity: 1;
+
+	/* TEXTAREA SETTINGS */
+	--textarea-color: 255,255,255;
+	--textarea-alpha: 0.125;
+	--textarea-alpha-focus: 0.165;
+	--textarea-text-color: hsl(0,0%,100%);
+	--textarea-radius: 28px;
+
+	/* CARD SETTINGS */
+	--card-color: hsl(0,0%,100%,0.14);
+	--card-color-hover: hsl(0,0%,100%,0.18);
+	--card-color-select: hsl(0,0%,100%,0.21);
+	--card-radius: 18px;
+
+	/* BUTTON SETTINGS */
+	--button-height: 32px;
+	--button-padding: 16px;
+	--button-action-color: hsl(0,0%,0%);
+	--button-radius: 16px;
+
+	/* POPOUT SETTINGS */
+	--popout-color: hsl(0,0%,0%,0.46);
+	--popout-blur: 6px;
+	--popout-radius: 18px;
+	--popout-shadow: 0 20px 40px hsl(0,0%,0%,0.44);
+	--popout-shadow-border: inset 0 1px 1px hsl(0,100%,100%,0.35), inset 0 -1px 2px hsl(0,0%,0%,0.25), inset 0 0 0 1px hsl(0,100%,100%,0.04);
+
+	/* LIQUID GLASS SETTINGS */
+	--light-angle: 40deg;
+}
+
+@supports (color: color-mix(in lch, red, blue)) {
+	.theme-dark {
+		/* TEXT COLOR SETTINGS */
+		--text-primary: hsl(0,0%,100%);
+		--text-secondary: hsl(0,0%,77%);
+		--text-default: hsl(0,0%,86%);
+		--text-muted: hsl(0,0%,72%);
+		--channels-default: hsl(0,0%,73%);
+		--channel-icon: hsl(0,0%,73%);
+		--text-strong: hsl(0,0%,100%);
+
+		/* ICON COLOR SETTINGS */
+		--icon-primary: hsl(0,0%,96%);
+		--icon-secondary: hsl(0,0%,84%);
+		--icon-tertiary: hsl(0,0%,71%);
+
+		/* INTERACTIVE COLOR SETTINGS */
+		--interactive-normal: hsl(0,0%,79%);
+		--interactive-hover: hsl(0,0%,91%);
+		--interactive-active: hsl(0,0%,100%);
+		--interactive-muted: hsl(0,0%,43%);
+
+		/* BACKGROUND MODIFIER SETTINGS */
+		--background-modifier-hover: hsl(0,0%,100%,0.075);
+		--background-modifier-active: hsl(0,0%,100%,0.1);
+		--background-modifier-selected: hsl(0,0%,100%,0.125);
+		--background-modifier-accent: hsl(0,0%,100%,0.175);
+		--background-primary: transparent;
+
+		/* ACCENT COLORED TEXT AND LINK SETTINGS */
+		--text-brand: hsl(var(--accent-hsl));
+		--text-link: hsl(var(--accent-hsl));
+	}
+}
+
+/* Home / Discord Logo Resizing, Positioning & Border Rounding */
+[data-list-item-id="guildsnav___home"],
+.tutorialContainer_f964c0,
+.tutorialContainer_c964c0 {
+	transform: scale(0.85) translateY(4px) !important;
+	transform-origin: center center !important;
+	margin-top: 0 !important;
+	margin-bottom: -8px !important;
+	padding-top: 0 !important;
+}
+
+[data-list-item-id="guildsnav___home"],
+[data-list-item-id="guildsnav___home"] .childWrapper_a5c120,
+[data-list-item-id="guildsnav___home"] img,
+[data-list-item-id="guildsnav___home"] svg,
+.tutorialContainer_f964c0 .childWrapper_a5c120,
+.tutorialContainer_c964c0 .childWrapper_a5c120 {
+	border-radius: 16px !important;
+	overflow: hidden !important;
+}
+
+/* Remove Message Pill / Bullet Backgrounds */
+[class*="message_"],
+[class*="messageListItem_"] {
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+/* Message Vertical Spacing Fix */
+[class*="messageListItem_"] {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-top: 1px !important;
+	padding-bottom: 1px !important;
+}
+
+[class*="message_"] {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-top: 2px !important;
+	padding-bottom: 2px !important;
+	min-height: unset !important;
+}
