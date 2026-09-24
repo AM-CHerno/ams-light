@@ -8,6 +8,12 @@ local terminal = "kitty"
 local fileManager = "kitty -e yazi"
 local menu = "$HOME/.local/bin/app-launcher.sh"
 hl.on("hyprland.start", function()
+hl.exec_cmd("WP=$(cat ~/.cache/last_wallpaper 2>/dev/null); if [ -z \"$WP\" ] || [ ! -f \"$WP\" ]; then WP=~/Pictures/wallpapers/default.jpg; fi; echo \"$WP\" > ~/.cache/last_wallpaper; sleep 1; awww img \"$WP\"")
+hl.exec_cmd("sleep 2; WP=$(cat ~/.cache/last_wallpaper); wal -i \"$WP\" -n")
+hl.exec_cmd("sleep 3; ~/.local/bin/apply-rofi-colors.sh")
+hl.exec_cmd("sleep 3; ~/.local/bin/apply-waybar-colors.sh")
+hl.exec_cmd("sleep 3; ~/.local/bin/apply-dunst-colors.sh")
+hl.exec_cmd("sleep 3; ~/.local/bin/apply-hyprlock-colors.sh")
 hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_RUNTIME_DIR HYPRLAND_INSTANCE_SIGNATURE")
 hl.exec_cmd("systemctl --user restart cliphist-text.service cliphist-image.service")
 hl.exec_cmd("pgrep -x waybar || waybar")

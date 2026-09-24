@@ -34,6 +34,11 @@ chmod +x ~/.local/bin/gpu-replay
 echo "==> Creating directories..."
 mkdir -p ~/Pictures/wallpapers ~/Pictures/Screenshots
 
+echo "==> Setting up default wallpaper..."
+if [ ! -f ~/Pictures/wallpapers/default.jpg ]; then
+    cp "$(dirname "$0")/Pictures/wallpapers/default.jpg" ~/Pictures/wallpapers/
+fi
+
 echo "==> Enabling clipboard services..."
 systemctl --user daemon-reload
 systemctl --user enable --now cliphist-text.service cliphist-image.service
