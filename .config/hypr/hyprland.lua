@@ -1,6 +1,6 @@
 hl.monitor({
     output   = "",
-    mode     = "preferred",
+    mode     = "1920x1080@165",
     position = "auto",
     scale    = "auto",
 })
@@ -8,18 +8,17 @@ local terminal = "kitty"
 local fileManager = "kitty -e yazi"
 local menu = "$HOME/.local/bin/app-launcher.sh"
 hl.on("hyprland.start", function()
+hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_RUNTIME_DIR HYPRLAND_INSTANCE_SIGNATURE")
+hl.exec_cmd("systemctl --user restart cliphist-text.service cliphist-image.service")
+hl.exec_cmd("pgrep -x waybar || waybar")
+hl.exec_cmd("pgrep -x awww-daemon || awww-daemon")
+hl.exec_cmd("pkill -x dunst; dunst &")
 hl.exec_cmd("WP=$(cat ~/.cache/last_wallpaper 2>/dev/null); if [ -z \"$WP\" ] || [ ! -f \"$WP\" ]; then WP=~/Pictures/wallpapers/default.jpg; fi; echo \"$WP\" > ~/.cache/last_wallpaper; sleep 1; awww img \"$WP\"")
 hl.exec_cmd("sleep 2; WP=$(cat ~/.cache/last_wallpaper); wal -i \"$WP\" -n")
 hl.exec_cmd("sleep 3; ~/.local/bin/apply-rofi-colors.sh")
 hl.exec_cmd("sleep 3; ~/.local/bin/apply-waybar-colors.sh")
 hl.exec_cmd("sleep 3; ~/.local/bin/apply-dunst-colors.sh")
 hl.exec_cmd("sleep 3; ~/.local/bin/apply-hyprlock-colors.sh")
-hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_RUNTIME_DIR HYPRLAND_INSTANCE_SIGNATURE")
-hl.exec_cmd("systemctl --user restart cliphist-text.service cliphist-image.service")
-hl.exec_cmd("pgrep -x waybar || waybar")
-hl.exec_cmd("pgrep -x awww-daemon || awww-daemon")
-hl.exec_cmd("pkill -x dunst; dunst &")
-hl.exec_cmd("sleep 1 && WP=$(cat ~/.cache/last_wallpaper 2>/dev/null || echo ~/Pictures/wallpapers/Red.png) && awww img \"$WP\" && wal -i \"$WP\" -n && ~/.local/bin/apply-rofi-colors.sh && ~/.local/bin/apply-waybar-colors.sh && ~/.local/bin/apply-dunst-colors.sh && ~/.local/bin/apply-hyprlock-colors.sh")
 hl.exec_cmd("pgrep -x hypridle || hypridle")
 hl.exec_cmd("pgrep -x gsr-ui || gsr-ui launch-hide-announce")
 end)
@@ -98,7 +97,7 @@ hl.config({
 })
 -- Force full opacity for these apps, ignoring the global rule above
 hl.window_rule({
-    match = { class = "^(zen|google-chrome|discord|kitty|wps|ONLYOFFICE|libreoffice.*)$" },
+    match = { class = "^(zen|org.gnome.Boxes|steam|google-chrome|VirtualBox Machine|discord|kitty|wps|ONLYOFFICE|libreoffice.*)$" },
     opacity = "1.0 override 1.0 override",
 })
 --Special workspaces (hidden unless actively toggled open)
