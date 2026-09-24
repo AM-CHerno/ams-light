@@ -1,12 +1,15 @@
 #!/bin/bash
 set -e
 
+echo "==> Syncing package databases..."
+sudo pacman -Syu --noconfirm
+
 echo "==> Installing official repo packages..."
 sudo pacman -S --needed hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
   awww python-pywal cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
   ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
-  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv discord
+  btop task blueman kcalc pavucontrol gwenview vim mpv discord
 
 echo "==> Checking for paru (AUR helper)..."
 if ! command -v paru &> /dev/null; then
@@ -19,7 +22,7 @@ fi
 
 echo "==> Installing AUR packages..."
 paru -S --needed spotify vscodium-bin zen-browser heroic-games-launcher-bin \
-  onlyoffice-bin gpu-screen-recorder obsidian equicord-installer-bin
+  onlyoffice-bin gpu-screen-recorder obsidian equicord-installer-bin neofetch
 
 echo "==> Copying dotfiles..."
 cp -r "$(dirname "$0")/.config/"* ~/.config/
