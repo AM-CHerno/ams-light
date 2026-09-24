@@ -21,7 +21,7 @@ if ! command -v paru &> /dev/null; then
 fi
 
 echo "==> Installing AUR packages..."
-paru -S --needed spotify vscodium-bin zen-browser heroic-games-launcher-bin \
+paru -S --needed firefox vscodium-bin heroic-games-launcher-bin \
   onlyoffice-bin gpu-screen-recorder obsidian equicord-installer-bin neofetch python-pywal
 
 echo "==> Copying dotfiles..."
