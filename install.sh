@@ -25,6 +25,7 @@ paru -S --needed spotify vscodium-bin zen-browser heroic-games-launcher-bin \
   onlyoffice-bin gpu-screen-recorder obsidian equicord-installer-bin neofetch python-pywal
 
 echo "==> Copying dotfiles..."
+mkdir -p ~/.config ~/.local/bin
 cp -r "$(dirname "$0")/.config/"* ~/.config/
 cp -r "$(dirname "$0")/.local/bin/"* ~/.local/bin/
 chmod +x ~/.local/bin/*.sh
