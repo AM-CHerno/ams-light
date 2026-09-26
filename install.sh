@@ -28,6 +28,9 @@ echo "==> Copying dotfiles..."
 mkdir -p ~/.config ~/.local/bin
 cp -r "$(dirname "$0")/.config/"* ~/.config/
 cp -r "$(dirname "$0")/.local/bin/"* ~/.local/bin/
+if [ -f "$(dirname "$0")/.bashrc" ]; then
+    cp "$(dirname "$0")/.bashrc" ~/.bashrc
+fi
 chmod +x ~/.local/bin/*.sh
 chmod +x ~/.local/bin/gpu-replay
 
