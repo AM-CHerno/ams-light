@@ -159,6 +159,7 @@ cat > ~/.config/waybar/config.jsonc << CONFIGEOF
     "format-off": "󰂲",
     "format-disabled": "󰂲",
     "format-connected": "󰂱  {num_connections}",
+    "format-no-controller": "",
     "tooltip-format": "{controller_alias}: {status}",
     "on-click": "$HOME/.local/bin/bluetooth-toggle.sh",
     "signal": 9
