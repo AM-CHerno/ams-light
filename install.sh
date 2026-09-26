@@ -2,7 +2,9 @@
 set -e
 
 echo "==> Syncing package databases..."
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm || {
+    echo "==> Sync had issues (possibly a slow mirror), continuing anyway..."
+}
 
 echo "==> Installing official repo packages..."
 sudo pacman -S --needed hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
