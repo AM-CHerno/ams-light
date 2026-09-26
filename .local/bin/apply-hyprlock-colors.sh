@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p ~/.config/hypr
 source ~/.cache/wal/colors.sh
 
 cat > ~/.config/hypr/hyprlock.conf << HYPRLOCKEOF

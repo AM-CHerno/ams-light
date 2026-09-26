@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p ~/.config/rofi
 source ~/.cache/wal/colors.sh
 
 cat > ~/.cache/wal/colors-rofi-dark-fixed.rasi << RASIEOF

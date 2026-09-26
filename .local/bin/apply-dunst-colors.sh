@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p ~/.config/dunst
 source ~/.cache/wal/colors.sh
 
 cat > ~/.config/dunst/dunstrc << DUNSTEOF

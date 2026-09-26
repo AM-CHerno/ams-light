@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p ~/.config/waybar
 source ~/.cache/wal/colors.sh
 
 cat > ~/.config/waybar/style.css << CSSEOF
