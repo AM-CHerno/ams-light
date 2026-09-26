@@ -1,13 +1,9 @@
 #!/bin/bash
-mkdir -p ~/.config/hypr
 source ~/.cache/wal/colors.sh
 
 cat > ~/.config/hypr/hyprlock.conf << HYPRLOCKEOF
 general {
-    disable_loading_bar = false
-    grace = 0
     hide_cursor = true
-    no_fade_in = false
 }
 
 background {
@@ -29,7 +25,6 @@ input-field {
     dots_size = 0.26
     dots_spacing = 0.3
     dots_center = true
-    dots_fade_time = 200
     outer_color = rgb(${color1#\#})
     inner_color = rgb(${background#\#})
     font_color = rgb(${foreground#\#})
