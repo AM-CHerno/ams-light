@@ -147,11 +147,13 @@ cat > ~/.config/waybar/config.jsonc << CONFIGEOF
         "interval": 900,
         "tooltip": true
     },
+
     "network": {
-        "format-wifi": "󰤨  {essid}",
-        "format-ethernet": "󰈀  Wired",
-        "format-disconnected": "󰤭  Off",
-        "tooltip-format": "{ifname}: {ipaddr}"
+    "format-wifi": "󰤨  {essid}",
+    "format-ethernet": "󰈀  Wired",
+    "format-disconnected": "󰤭  Off",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click-right": "nmgui"
     },
 
     "bluetooth": {
@@ -162,6 +164,7 @@ cat > ~/.config/waybar/config.jsonc << CONFIGEOF
     "format-no-controller": "",
     "tooltip-format": "{controller_alias}: {status}",
     "on-click": "$HOME/.local/bin/bluetooth-toggle.sh",
+    "on-click-right": "blueman-manager",
     "signal": 9
     },
 
