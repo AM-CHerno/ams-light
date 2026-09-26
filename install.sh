@@ -17,6 +17,7 @@ echo "==> Checking for paru (AUR helper)..."
 if ! command -v paru &> /dev/null; then
     echo "paru not found, installing..."
     sudo pacman -S --needed base-devel git
+    rm -rf /tmp/paru-install
     git clone https://aur.archlinux.org/paru.git /tmp/paru-install
     (cd /tmp/paru-install && makepkg -si --noconfirm)
     rm -rf /tmp/paru-install
