@@ -2,8 +2,8 @@
 
 A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper based theming via pywal rofi, waybar, dunst, hyprlock, and kitty all shift color palette together on wallpaper change.
 
-# Caution
-This rice is desktop focused and could make problems or miss some featues if installed on a laptop
+> [!CAUTION]
+> This rice is desktop-focused. Installing it on a laptop may result in missing features (such as battery and backlight controls) or unexpected behavior.
 
 ## Stack
 - **WM**: Hyprland (Lua config)
