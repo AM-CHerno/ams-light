@@ -26,6 +26,57 @@ A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper based 
 > [!CAUTION]
 > This rice is desktop-focused. Installing it on a laptop may result in missing features (such as battery and backlight controls) or unexpected behavior.
 
+> [!TIP]
+> **Modifier Key:** <kbd>Super</kbd> refers to the **Windows / Super** key.
+
+## Keybindings
+
+### Applications & Launchers
+
+| Keybinding | Action | Command |
+| :--- | :--- | :--- |
+| <kbd>Super</kbd> + <kbd>T</kbd> | Terminal | `kitty` |
+| <kbd>Super</kbd> + <kbd>E</kbd> | File Manager | `kitty -e yazi` |
+| <kbd>Super</kbd> + <kbd>R</kbd> | App Launcher | `app-launcher.sh` |
+| <kbd>Super</kbd> + <kbd>V</kbd> | Clipboard History | `clipboard-menu.sh` |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Take Screenshot | `screenshot.sh` |
+| <kbd>Super</kbd> + <kbd>L</kbd> | Lock Screen | `hyprlock` |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> | Toggle Layout | `US` / `ARA` |
+
+### Window Management
+
+| Keybinding | Action |
+| :--- | :--- |
+| <kbd>Super</kbd> + <kbd>Q</kbd> | Close active window |
+| <kbd>Super</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd> | Toggle floating mode |
+| <kbd>Super</kbd> + <kbd>P</kbd> | Toggle pseudo-tiling |
+| <kbd>Super</kbd> + <kbd>J</kbd> | Toggle split orientation |
+| <kbd>Super</kbd> + <kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> | Change window focus |
+| <kbd>Super</kbd> + <kbd>M</kbd> | Exit Hyprland session |
+
+### Workspaces & Scratchpads
+
+| Keybinding | Action |
+| :--- | :--- |
+| <kbd>Super</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Focus workspace 1–10 |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Move window to workspace 1–10 |
+| <kbd>Super</kbd> + <kbd>S</kbd> | Toggle Special Workspace (`s`) |
+| <kbd>Super</kbd> + <kbd>D</kbd> | Toggle Special Workspace (`d`) |
+
+### Wallpapers & Theme
+
+| Keybinding | Action |
+| :--- | :--- |
+| <kbd>Super</kbd> + <kbd>W</kbd> | Open Wallpaper Picker |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Apply Random Wallpaper |
+
+### Mouse Controls
+
+| Keybinding | Action |
+| :--- | :--- |
+| <kbd>Super</kbd> + <kbd>LMB</kbd> | Drag & move window |
+| <kbd>Super</kbd> + <kbd>RMB</kbd> | Resize window |
+
 ## Stack
 - **WM**: Hyprland (Lua config)
 - **Bar**: Waybar
