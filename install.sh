@@ -11,7 +11,7 @@ sudo pacman -S --needed hyprland waybar rofi dunst hyprlock hypridle kitty yazi 
   awww cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
   ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
-  btop task blueman kcalc pavucontrol gwenview vim mpv discord starship
+  btop task blueman kcalc pavucontrol gwenview vim mpv starship haruna
 
 echo "==> Checking for paru (AUR helper)..."
 if ! command -v paru &> /dev/null; then
@@ -24,8 +24,8 @@ if ! command -v paru &> /dev/null; then
 fi
 
 echo "==> Installing AUR packages..."
-paru -S --needed firefox vscodium-bin heroic-games-launcher-bin \
-   gpu-screen-recorder obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin
+paru -S --needed firefox vscodium-bin \
+   gpu-screen-recorder-ui obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin haruna
 
 echo "==> Copying dotfiles..."
 mkdir -p ~/.config ~/.local/bin

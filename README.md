@@ -106,13 +106,13 @@ sudo pacman -S hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
   awww python-pywal cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
   ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
-  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv
+  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv starship haruna
 ```
 
 **AUR (via paru):**
 ```bash
-paru -S spotify vscodium-bin zen-browser heroic-games-launcher-bin \
-  onlyoffice-bin gpu-screen-recorder obsidian
+paru -S --needed firefox vscodium-bin \
+   gpu-screen-recorder-ui obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin haruna
 ```
 
 ## Installation
