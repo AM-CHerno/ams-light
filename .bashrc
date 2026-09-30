@@ -24,3 +24,9 @@ neofetch
 export PATH="$HOME/.local/bin:$PATH"
 alias clear='clear && printf "\e[3J"'
 alias hyprland="start-hyprland"
+eval "$(starship init bash)"
+
+
+computer() {
+  ~/.venvs/agent/bin/python ~/.local/bin/hypr_agent.py
+}
