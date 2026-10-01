@@ -25,7 +25,7 @@ fi
 
 echo "==> Installing AUR packages..."
 paru -S --needed firefox vscodium-bin \
-   gpu-screen-recorder-ui obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin haruna
+   gpu-screen-recorder-ui gpu-screen-recorder obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin haruna
 
 echo "==> Copying dotfiles..."
 mkdir -p ~/.config ~/.local/bin
