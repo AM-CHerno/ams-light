@@ -106,7 +106,7 @@ sudo pacman -S hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
   awww python-pywal cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
   ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
-  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv starship haruna
+  neofetch btop task blueman kcalc pavucontrol gwenview vim mpv starship haruna discord
 ```
 
 **AUR (via paru):**
