@@ -112,7 +112,7 @@ sudo pacman -S hyprland waybar rofi dunst hyprlock hypridle kitty yazi \
 **AUR (via paru):**
 ```bash
 paru -S --needed firefox vscodium-bin \
-   gpu-screen-recorder-ui gpu-screen-recorder obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin haruna
+   gpu-screen-recorder-ui gpu-screen-recorder obsidian equicord-installer-bin neofetch nmgui-bin python-pywal arduino-ide-bin photoflare
 ```
 
 ## Installation
