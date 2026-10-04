@@ -11,7 +11,7 @@ sudo pacman -S --needed hyprland waybar rofi dunst hyprlock hypridle kitty yazi 
   awww cliphist wl-clipboard grim slurp hyprpicker \
   pamixer ddcutil networkmanager bluez bluez-utils jq \
   ttf-jetbrains-mono-nerd noto-fonts-cjk qt5ct qt6ct nwg-look \
-  btop task blueman kcalc pavucontrol gwenview vim mpv starship haruna discord thunar tumbler ffmpegthumbnailer poppler-glib libgsf less
+  btop task blueman kcalc pavucontrol gwenview vim mpv starship haruna discord thunar tumbler ffmpegthumbnailer poppler-glib libgsf less gnome-boxes qemu-desktop libvirt edk2-ovmf dnsmasq iptables-nft
 
 echo "==> Checking for paru (AUR helper)..."
 if ! command -v paru &> /dev/null; then
