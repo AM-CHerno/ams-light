@@ -65,6 +65,19 @@ fi
 (cd "$CIPHER_SRC" && npm install && cd src && npm install)
 chmod +x ~/.local/bin/cipher
 
+echo "==> Adding Cipher to the app launcher..."
+mkdir -p ~/.local/share/applications
+cat > ~/.local/share/applications/cipher.desktop <<DESKTOP
+[Desktop Entry]
+Type=Application
+Name=Cipher
+Comment=Sci-fi recon terminal
+Exec=$HOME/.local/bin/cipher
+Icon=utilities-terminal
+Terminal=false
+Categories=Utility;System;
+DESKTOP
+
 echo "==> Creating directories..."
 mkdir -p ~/Pictures/wallpapers ~/Pictures/Screenshots
 
