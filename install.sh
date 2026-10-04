@@ -37,6 +37,34 @@ fi
 chmod +x ~/.local/bin/*.sh
 chmod +x ~/.local/bin/gpu-replay
 
+echo "==> Installing Cipher..."
+CIPHER_REPO=https://github.com/Hirafay/cipher.git
+CIPHER_SRC="$HOME/.local/src/cipher"
+CIPHER_COMMIT=""
+
+sudo pacman -S --needed base-devel git python rsync
+
+export NVM_DIR="$HOME/.nvm"
+if [ ! -s "$NVM_DIR/nvm.sh" ]; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+fi
+set +e
+. "$NVM_DIR/nvm.sh"
+set -e
+nvm install 20
+
+mkdir -p "$(dirname "$CIPHER_SRC")"
+if [ -d "$CIPHER_SRC/.git" ]; then
+    git -C "$CIPHER_SRC" fetch
+else
+    git clone "$CIPHER_REPO" "$CIPHER_SRC"
+fi
+if [ -n "$CIPHER_COMMIT" ]; then
+    git -C "$CIPHER_SRC" checkout "$CIPHER_COMMIT"
+fi
+(cd "$CIPHER_SRC" && npm install && cd src && npm install)
+chmod +x ~/.local/bin/cipher
+
 echo "==> Creating directories..."
 mkdir -p ~/Pictures/wallpapers ~/Pictures/Screenshots
 
