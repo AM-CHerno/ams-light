@@ -20,10 +20,6 @@ A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper based 
     <td><img src="screenshots/image5.jpg" alt="Desktop 5"></td>
     <td><img src="screenshots/image6.jpg" alt="Desktop 6"></td>
   </tr>
-  <tr>
-    <td><img src="screenshots/image7.jpg" alt="Desktop 7"></td>
-    <td><img src="screenshots/image8.jpg" alt="Desktop 8"></td>
-  </tr>
 </table>
 
 > [!TIP]
