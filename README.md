@@ -49,6 +49,7 @@ A minimal, custom-built Hyprland rice (Lua config) with dynamic wallpaper based 
 | <kbd>Super</kbd> + <kbd>J</kbd> | Toggle split orientation |
 | <kbd>Super</kbd> + <kbd>←</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> | Change window focus |
 | <kbd>Super</kbd> + <kbd>M</kbd> | Exit Hyprland session |
+| <kbd>Super</kbd> + <kbd>F</kbd> | Fullscreen |
 
 ### Workspaces & Scratchpads
 
